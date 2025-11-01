@@ -61,7 +61,7 @@ const Nav: React.FC<NavProps> = ({ currentTheme, currentSection, onPressNav }) =
 					<a
 						className='btn btn-ghost normal-case text-xl md:text-3xl hover:bg-transparent focus:bg-transparent'
 						onClick={() => handleOnPressNav('main')}>
-						{"Mus'ab"}
+						{"Ugo.B"}
 					</a>
 				</div>
 				<div className='flex-none'>

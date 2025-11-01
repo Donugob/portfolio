@@ -18,7 +18,7 @@ import { cn } from '../helpers';
 const Home: NextPage = () => {
 	const [currentTheme, toggleTheme] = useCurrentTheme();
 	const [currentSection, setCurrentSection] = useState<'main' | 'about' | 'experience' | 'contact'>('main');
-	const [currentTab, setCurrentTab] = useState<'studio14' | 'montech' | 'scrapays' | 'binary'>('studio14');
+	const [currentTab, setCurrentTab] = useState<'jurismemo' | 'lawsanse' | 'ulorin' | 'unec' | 'lawsaimsu'>('jurismemo');
 
 	const mainRef = useRef<HTMLDivElement>(null);
 	const aboutRef = useRef<HTMLDivElement>(null);
@@ -52,10 +52,9 @@ const Home: NextPage = () => {
 		}
 	};
 
-	const handleOnChangeTab = (tab: 'montech' | 'scrapays' | 'binary' | 'studio14') => {
+	const handleOnChangeTab = (tab: 'jurismemo' | 'lawsanse' | 'ulorin' | 'unec' | 'lawsaimsu') => {
 		setCurrentTab(tab);
 	};
-
 	useEffect(() => {
 		document.documentElement.style.setProperty(
 			'--scrollbar-background',
@@ -70,11 +69,109 @@ const Home: NextPage = () => {
 	return (
 		<>
 			<Head>
-				<title>Mus&apos;ab Olurode - Full Stack Developer</title>
+				<title>Ugo.B | Full Stack Developer in Imo State</title>
 				<meta
 					name='description'
-					content='Experienced full-stack developer with over 6 years of professional experience'
+					content='Ugo.B is a professional full-stack web developer and web designer based in Owerri, Imo State, Nigeria. I build fast, modern, SEO-optimized websites for businesses and individuals across Nigeria.'
 				/>
+				<meta
+					name='keywords'
+					content='web developer, website developer, web developer Owerri, web designer Owerri, web developer Imo State, website developer Owerri, web design Imo, Owerri web developer, freelance web developer Nigeria, full stack developer Owerri, best web designer Owerri, website development in Owerri'
+				/>
+				<meta name='author' content='Ugo.B' />
+				<meta name='robots' content='index, follow' />
+
+				<meta property='og:type' content='website' />
+				<meta property='og:title' content='Ugo.B — Web Developer & Web Designer in Owerri' />
+				<meta
+					property='og:description'
+					content='Looking for a professional web developer in Owerri or Imo State? Ugo.B builds clean, responsive, and SEO-driven websites that help brands stand out online.'
+				/>
+				<meta property='og:image' content='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png' />
+				<meta property='og:url' content='https://build-with-ugob.com.ng' />
+				<meta property='og:site_name' content='Ugo.B Portfolio' />
+
+				<meta name='twitter:card' content='summary_large_image' />
+				<meta name='twitter:title' content='Ugo.B — Web Developer in Owerri' />
+				<meta
+					name='twitter:description'
+					content='Hire an experienced web developer and web designer in Owerri, Imo State. I create fast, modern, and responsive websites for businesses across Nigeria.'
+				/>
+				<meta
+					name='twitter:image'
+					content='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png'
+				/>
+
+				<meta name='geo.region' content='NG-IM' />
+				<meta name='geo.placename' content='Owerri' />
+				<meta name='geo.position' content='5.4853;7.0350' />
+				<meta name='ICBM' content='5.4853, 7.0350' />
+
+				<link rel='canonical' href='https://build-with-ugob.com.ng' />
+
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							'@context': 'https://schema.org',
+							'@type': 'Person',
+							name: 'Ugo.B',
+							alternateName: 'Emeka Emmanuel Ugonna',
+							jobTitle: 'Web Developer & Web Designer',
+							telephone: '+2348103579586',
+							description:
+								'Full-stack web developer based in Owerri, Imo State, Nigeria. I specialize in building responsive, SEO-optimized websites for brands and individuals.',
+							url: 'https://build-with-ugob.com.ng',
+							image: 'https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png',
+							address: {
+								'@type': 'PostalAddress',
+								addressLocality: 'Owerri',
+								addressRegion: 'Imo State',
+								addressCountry: 'Nigeria',
+							},
+							sameAs: [
+								'https://github.com/donugob',
+								'https://x.com/Don_ugob',
+								'https://linkedin.com/in/emmanuel-emeka-2a8b2a281',
+							],
+						}),
+					}}
+				/>
+
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							'@context': 'https://schema.org',
+							'@type': 'LocalBusiness',
+							name: 'Ugo.B (Emeka Emmanuel Ugonna)',
+							image: 'https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png',
+							telephone: '+2348103579586',
+							address: {
+								'@type': 'PostalAddress',
+								addressLocality: 'Owerri',
+								addressRegion: 'Imo State',
+								addressCountry: 'NG',
+							},
+							url: 'https://build-with-ugob.com.ng',
+							sameAs: [
+								'https://github.com/donugob',
+								'https://x.com/Don_ugob',
+								'https://linkedin.com/in/emmanuel-emeka-2a8b2a281',
+							],
+						}),
+					}}
+				/>
+				<link
+					rel='preload'
+					as='image'
+					href='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png'
+				/>
+				<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+				<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet' />
+
+				{/* Favicon */}
+				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Nav currentSection={currentSection} currentTheme={currentTheme} onPressNav={handlePressNav} />
 			<div
@@ -88,7 +185,7 @@ const Home: NextPage = () => {
 					<div className='text-3xl lg:text-7xl text-center'>
 						<div className='overflow-hidden'>
 							<p className='mb-8 animate-slide-in'>
-								Hi!, I’m <br /> Mus&apos;ab Olurode, a
+								Hi!, I’m <br /> Ugo.B, a
 							</p>
 						</div>
 						<InView className='overflow-hidden' onChange={(inView) => handleOnVisibilityChanged(inView, 'main')}>
@@ -130,16 +227,22 @@ const Home: NextPage = () => {
 							currentTheme === 'dark' ? 'border-t-white border-b-white' : 'border-t-main border-b-main'
 						)}>
 						<span>Developer</span>
-						<span>Freerunner</span>
-						<span>Bibliophile</span>
+						<span>Creative Thinker</span>
+						<span>Problem Solver</span>
 						<span>Gamer</span>
 					</div>
 					<p className='text-md md:text-2xl mt-12 lg:text-left'>
-						I am Mus&apos;ab Olurode, a dedicated full-stack developer with an extensive background in software
-						development, encompassing over 6 years of hands-on experience in the field. Throughout my career, I&apos;ve
-						honed my skills across both server and client-side development, contributing to a diverse array of projects.
-						These experiences have not only broadened my technical expertise but have also nurtured my adaptability,
-						allowing me to swiftly grasp new concepts and technologies as required.
+						I’m <strong>Emeka Emmanuel Ugonna</strong> (popularly known as <strong>Ugo.B</strong>), a passionate
+						full-stack web developer based in <strong>Owerri, Imo State</strong>. I specialize in building fast, clean,
+						and responsive websites that don’t just look great but also perform exceptionally well on search engines.
+						Over the years, I’ve worked on diverse projects — from personal portfolios to business websites and tech
+						platforms — helping brands bring their ideas to life through functional and visually appealing design.
+						<br />
+						<br />
+						What drives me is simple: turning creative concepts into scalable digital experiences that make an impact.
+						Whether it’s front-end development, backend logic, or deployment, I enjoy crafting solutions that balance
+						performance, usability, and design. When I’m not coding, you’ll probably find me reading about design
+						systems, exploring new technologies, or gaming to clear my head.
 					</p>
 				</section>
 
@@ -147,97 +250,155 @@ const Home: NextPage = () => {
 					ref={experienceRef}
 					className='h-screen container mx-auto flex flex-col justify-center snap-center px-2 md:px-0'>
 					<InView onChange={(inView) => handleOnVisibilityChanged(inView, 'experience')}>
-						<p className='text-md md:text-2xl font-bold mb-4 md:mb-14'>Work Experience</p>
+						<p className='text-md md:text-2xl font-bold mb-4 md:mb-14'>Projects & Experience</p>
 					</InView>
+
 					<div className='flex flex-col lg:flex-row min-h-[428px] lg:min-h-[504px]'>
+						{/* Tabs */}
 						<div className='tabs mb-4 lg:mb-0 flex-col lg:items-start lg:h-full lg:shrink-0'>
 							<a
 								className={cn(
-									'tab lg:border-l-2 lg:border-b-0 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 h-auto flex-grow w-full lg:justify-start lg:pl-10',
-									currentTab === 'studio14' ? ' tab-active' : ''
+									'tab lg:border-l-2 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 flex-grow w-full lg:justify-start lg:pl-10',
+									currentTab === 'jurismemo' ? 'tab-active' : ''
 								)}
-								onClick={() => handleOnChangeTab('studio14')}>
-								Studio 14
+								onClick={() => handleOnChangeTab('jurismemo')}>
+								Jurismemo
 							</a>
+
 							<a
 								className={cn(
-									'tab lg:border-l-2 lg:border-b-0 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 h-auto flex-grow w-full lg:justify-start lg:pl-10',
-									currentTab === 'scrapays' ? ' tab-active' : ''
+									'tab lg:border-l-2 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 flex-grow w-full lg:justify-start lg:pl-10',
+									currentTab === 'lawsanse' ? 'tab-active' : ''
 								)}
-								onClick={() => handleOnChangeTab('scrapays')}>
-								Scrapays Technologies
+								onClick={() => handleOnChangeTab('lawsanse')}>
+								LAWSAN South East Zone
 							</a>
+
 							<a
 								className={cn(
-									'tab lg:border-l-2 lg:border-b-0 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 h-auto flex-grow w-full lg:justify-start lg:pl-10',
-									currentTab === 'montech' ? ' tab-active' : ''
+									'tab lg:border-l-2 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 flex-grow w-full lg:justify-start lg:pl-10',
+									currentTab === 'ulorin' ? 'tab-active' : ''
 								)}
-								onClick={() => handleOnChangeTab('montech')}>
-								Montech Studios
+								onClick={() => handleOnChangeTab('ulorin')}>
+								Law Students Society, Unilorin
 							</a>
+
 							<a
 								className={cn(
-									'tab lg:border-l-2 lg:border-b-0 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 h-auto flex-grow w-full lg:justify-start lg:pl-10',
-									currentTab === 'binary' ? ' tab-active' : ''
+									'tab lg:border-l-2 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 flex-grow w-full lg:justify-start lg:pl-10',
+									currentTab === 'unec' ? 'tab-active' : ''
 								)}
-								onClick={() => handleOnChangeTab('binary')}>
-								The Binary Agency
+								onClick={() => handleOnChangeTab('unec')}>
+								UNEC Voting System
+							</a>
+
+							<a
+								className={cn(
+									'tab lg:border-l-2 tab-bordered text-lg lg:text-4xl py-2 lg:py-5 flex-grow w-full lg:justify-start lg:pl-10',
+									currentTab === 'lawsaimsu' ? 'tab-active' : ''
+								)}
+								onClick={() => handleOnChangeTab('lawsaimsu')}>
+								LAWSA IMSU Voting System
 							</a>
 						</div>
+
+						{/* Content */}
 						<div className='relative flex-grow overflow-hidden'>
+							{/* Jurismemo */}
 							<div
 								className={cn(
 									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
 									'duration-300 lg:translate-x-40',
-									currentTab === 'studio14' && 'opacity-100 translate-x-0 lg:translate-x-0'
+									currentTab === 'jurismemo' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Senior Frontend Developer @ Studio 14</p>
-								<p className='text-md md:text-2xl md:mt-5 mb-7'>November 2022 - Present</p>
+								<p className='text-lg lg:text-4xl font-bold'>Founder & Developer @ Jurismemo</p>
+								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025 – Present</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
-									<li>Building sophisticated frontend applications.</li>
-									<li>Building vanilla HTML templates for WordPress applications.</li>
-								</ul>
-							</div>
-							<div
-								className={cn(
-									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
-									'duration-300 lg:translate-x-40',
-									currentTab === 'montech' && 'opacity-100 translate-x-0 lg:translate-x-0'
-								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Backend Developer @ Montech Studios</p>
-								<p className='text-md md:text-2xl md:mt-5 mb-7'>February 2022 - July 2022</p>
-								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
-									<li>Built proof of concepts for existing project specifications.</li>
-									<li>Managed and updated full-fledged web3 applications.</li>
-								</ul>
-							</div>
-							<div
-								className={cn(
-									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
-									'duration-300 lg:translate-x-40',
-									currentTab === 'scrapays' && 'opacity-100 translate-x-0 lg:translate-x-0'
-								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Full-stack Developer @ Scrapays Technologies</p>
-								<p className='text-md md:text-2xl md:mt-5 mb-7'>January 2020 - December 2022</p>
-								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
-									<li>Led the development of the company&apos;s flagship product as a principal engineer.</li>
 									<li>
-										Developed mobile apps, landing pages, dashboards and IOT applications for the company&apos;s
-										product.
+										Created <strong>Jurismemo</strong>, a digital legal resource platform simplifying complex legal
+										materials for Nigerian students.
+									</li>
+									<li>
+										Handled everything from UI/UX design and frontend architecture to backend APIs and data models.
+									</li>
+									<li>
+										Currently expanding the platform to include AI-powered case summaries and searchable legal insights.
 									</li>
 								</ul>
 							</div>
+
+							{/* LAWSAN South East */}
 							<div
 								className={cn(
 									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
 									'duration-300 lg:translate-x-40',
-									currentTab === 'binary' && 'opacity-100 translate-x-0 lg:translate-x-0'
+									currentTab === 'lawsanse' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Software Engineer @ The Binary Agency</p>
-								<p className='text-md md:text-2xl md:mt-5 mb-7'>February 2019 - January 2020</p>
+								<p className='text-lg lg:text-4xl font-bold'>Web Developer @ LAWSAN South East Zone</p>
+								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
-									<li>Built and maintained web applications for multiple clients.</li>
-									<li>Reviewed project specifications and developed solutions to meet the requirements.</li>
+									<li>
+										Designed and developed the official <strong>LAWSAN South East Zone</strong> website, featuring event
+										registration and awards voting systems.
+									</li>
+									<li>Integrated secure payment gateways and live voting features for seamless user participation.</li>
+									<li>Optimized the portal for speed, accessibility, and mobile responsiveness.</li>
+								</ul>
+							</div>
+
+							{/* LSS Unilorin */}
+							<div
+								className={cn(
+									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
+									'duration-300 lg:translate-x-40',
+									currentTab === 'ulorin' && 'opacity-100 translate-x-0 lg:translate-x-0'
+								)}>
+								<p className='text-lg lg:text-4xl font-bold'>
+									Web Developer @ Law Students Society, University of Ilorin
+								</p>
+								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
+								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
+									<li>
+										Developed a professional-grade website for the <strong>LSS Unilorin</strong> association.
+									</li>
+									<li>Structured content systems for news, podcasts, events, and announcements.</li>
+									<li>Ensured high accessibility and compliance with modern web standards.</li>
+								</ul>
+							</div>
+
+							{/* UNEC Voting System */}
+							<div
+								className={cn(
+									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
+									'duration-300 lg:translate-x-40',
+									currentTab === 'unec' && 'opacity-100 translate-x-0 lg:translate-x-0'
+								)}>
+								<p className='text-lg lg:text-4xl font-bold'>Voting System Developer @ UNEC LAWSA</p>
+								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
+								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
+									<li>
+										Developed a secure and reliable digital voting system for <strong>UNEC LAWSA Awards</strong>.
+									</li>
+									<li>Implemented encrypted authentication and real-time result tracking.</li>
+									<li>Delivered a seamless voting dashboard with live result updates.</li>
+								</ul>
+							</div>
+
+							{/* LAWSA IMSU Voting System */}
+							<div
+								className={cn(
+									'flex-grow lg:pl-20 absolute top-0 left-0 opacity-0 -translate-x-40 transition-[opacity_transform]',
+									'duration-300 lg:translate-x-40',
+									currentTab === 'lawsaimsu' && 'opacity-100 translate-x-0 lg:translate-x-0'
+								)}>
+								<p className='text-lg lg:text-4xl font-bold'>Developer @ LAWSA IMSU</p>
+								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
+								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
+									<li>
+										Built a monetized and transparent voting portal for <strong>LAWSA IMSU Awards</strong>.
+									</li>
+									<li>Integrated role-based authentication and live result analytics.</li>
+									<li>Improved efficiency by over 70% and revenue by 900% compared to previous manual processes.</li>
 								</ul>
 							</div>
 						</div>
@@ -252,7 +413,7 @@ const Home: NextPage = () => {
 					</InView>
 					<div className='flex justify-between mt-16 gap-x-5 lg:gap-x-16'>
 						<a
-							href='mailto:olurodemusab@gmail.com'
+							href='mailto:contactugob@gmail.com'
 							title='Email'
 							className={clsx(
 								'btn btn-circle bg-transparent border-2 w-[50px] h-[50px] lg:w-[82px] lg:h-[82px] p-2 group',
@@ -266,7 +427,7 @@ const Home: NextPage = () => {
 							/>
 						</a>
 						<a
-							href='https://twitter.com/_RedDxt'
+							href='https://twitter.com/Don_ugob'
 							target='_blank'
 							rel='noreferrer'
 							title='Twitter'
@@ -282,7 +443,7 @@ const Home: NextPage = () => {
 							/>
 						</a>
 						<a
-							href='https://www.linkedin.com/in/musab-olurode/'
+							href='https://www.linkedin.com/in/emmanuel-emeka-2a8b2a281/'
 							target='_blank'
 							rel='noreferrer'
 							title='LinkedIn'
@@ -298,7 +459,7 @@ const Home: NextPage = () => {
 							/>
 						</a>
 						<a
-							href='https://github.com/musab-olurode'
+							href='https://github.com/donugob'
 							target='_blank'
 							rel='noreferrer'
 							title='GitHub'

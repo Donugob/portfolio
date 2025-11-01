@@ -7,38 +7,56 @@ import useCurrentTheme from '../../hooks/useCurrentTheme';
 const Print: NextPage = () => {
 	const [currentTheme] = useCurrentTheme();
 
+	// Environment-driven contact links (set these in your .env.local or hosting provider)
+	const RESUME_URL = process.env.NEXT_PUBLIC_RESUME_URL || '#';
+	const EMAIL = process.env.NEXT_PUBLIC_EMAIL || 'contact@yourdomain.com';
+	const LINKEDIN = process.env.NEXT_PUBLIC_LINKEDIN || '#';
+	const GITHUB = process.env.NEXT_PUBLIC_GITHUB || '#';
+	const PORTFOLIO = process.env.NEXT_PUBLIC_PORTFOLIO || '#';
+	const LOCATION = process.env.NEXT_PUBLIC_LOCATION || 'Owerri, Imo State, Nigeria';
+
 	return (
 		<>
 			<Head>
-				<title>Mus&apos;ab Olurode - Full Stack Developer</title>
+				<title>Emeka Emmanuel Ugonna (Ugo.B) — Web Developer in Owerri</title>
 				<meta
 					name='description'
-					content='Experienced full-stack developer with over 5 years of professional experience'
+					content='Ugo.B — Freelance full-stack web developer based in Owerri, Imo State. I build fast, responsive and SEO-optimized websites and web apps for businesses, associations and individuals.'
+				/>
+				<meta
+					name='keywords'
+					content='web developer Owerri, web developer Imo, freelance web developer Owerri, website developer Owerri, web designer Owerri, full stack developer Nigeria'
 				/>
 			</Head>
+
 			<a
-				href={process.env.NEXT_PUBLIC_RESUME_URL}
+				href={RESUME_URL}
 				target='_blank'
 				rel='noreferrer'
 				className={clsx('link absolute top-0 right-10', currentTheme === 'light' ? 'text-main' : 'text-white')}>
 				Download PDF
 			</a>
+
 			<Page>
-				<div className='font-sans px-8 space-y-6'>
-					{/* Header/Contact Info */}
+				<div className='font-sans px-8 space-y-6 print:text-black print:bg-white'>
+					{/* Header / Contact */}
 					<header className='text-center space-y-2'>
-						<h1 className='text-2xl font-bold text-[#003366]'>MUS&apos;AB OLURODE</h1>
+						<h1 className='text-2xl font-bold text-[#003366]'>EMEKA EMMANUEL UGONNA</h1>
 						<p className='text-sm'>
-							Kwara, NGA | P: +2348101340291 | olurodemusab@gmail.com |{' '}
-							<a href='https://www.linkedin.com/in/musab-olurode' className='text-blue-600 link'>
-								LinkedIn Profile
+							{LOCATION} |{' '}
+							<a href={`mailto:${EMAIL}`} className='text-blue-600 link'>
+								{EMAIL}
 							</a>{' '}
 							|{' '}
-							<a href='https://github.com/musab-olurode' className='text-blue-600 link'>
-								Github
+							<a href={LINKEDIN} className='text-blue-600 link' target='_blank' rel='noreferrer'>
+								LinkedIn
 							</a>{' '}
 							|{' '}
-							<a href='https://www.musabolurode.dev' className='text-blue-600 link'>
+							<a href={GITHUB} className='text-blue-600 link' target='_blank' rel='noreferrer'>
+								GitHub
+							</a>{' '}
+							|{' '}
+							<a href={PORTFOLIO} className='text-blue-600 link' target='_blank' rel='noreferrer'>
 								Portfolio
 							</a>
 						</p>
@@ -48,11 +66,10 @@ const Print: NextPage = () => {
 					<section>
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>PROFESSIONAL SUMMARY</h2>
 						<p className='text-sm'>
-							Results-driven Full Stack Developer with over 6 years of hands-on experience delivering scalable,
-							consumer-focused digital solutions. Skilled at building robust web and mobile applications using modern
-							frameworks and languages, including Typescript, React.js, React Native, Node.js, Kotlin, PHP (Laravel),
-							and Go. Proven expertise in frontend and backend development, driving efficiency and innovation for
-							startups, agencies, and government projects.
+							Freelance full-stack web developer (Ugo.B) based in Owerri, Imo State. I design and build fast,
+							accessible, and SEO-optimised websites and web applications for student associations, small businesses and
+							organizations across Nigeria. I focus on pragmatic solutions — clean frontends, reliable backends, and
+							deployable systems that make an immediate difference to clients.
 						</p>
 					</section>
 
@@ -61,199 +78,187 @@ const Print: NextPage = () => {
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>CORE COMPETENCIES</h2>
 						<div className='grid grid-cols-2 gap-4'>
 							<ul className='list-disc list-outside ml-4 text-sm'>
-								<li>Frontend Development</li>
-								<li>Backend Development</li>
-								<li>Mobile App Development</li>
-								<li>Web3 Development</li>
-								<li>Project Management</li>
+								<li>Responsive Frontend (HTML, CSS, Tailwind)</li>
+								<li>Backend & API design (Node, PHP, simple REST)</li>
+								<li>Static site & SEO optimisation</li>
+								<li>Authentication & role-based systems</li>
 							</ul>
 							<ul className='list-disc list-outside ml-4 text-sm'>
-								<li>Database Management</li>
-								<li>Problem-Solving</li>
+								<li>Payment gateway integration</li>
+								<li>Voting systems & secure result verification</li>
+								<li>Performance & accessibility</li>
 							</ul>
 						</div>
 					</section>
 
-					{/* Work Experience */}
+					{/* Projects & Experience (Freelance / Client Work) */}
 					<section>
-						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>WORK EXPERIENCE</h2>
+						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>PROJECTS & EXPERIENCE</h2>
 
-						<div className='space-y-4'>
-							{/* Studio 14 */}
+						<div className='space-y-6 text-sm'>
+							{/* Jurismemo */}
 							<div>
 								<div className='flex justify-between items-baseline'>
 									<div>
-										<h3 className='font-bold text-[#800000]'>Senior Frontend Developer</h3>
-										<p className='italic'>Studio 14</p>
+										<h3 className='font-bold text-[#800000]'>Founder & Developer — Jurismemo</h3>
+										<p className='italic'>Personal project</p>
 									</div>
 									<div className='text-right'>
-										<p className='italic'>Remote</p>
-										<p className='text-sm'>Apr 2022 – Till date</p>
+										<p className='italic'>Owerri / Remote</p>
+										<p className='text-sm'>2024 – Present</p>
 									</div>
 								</div>
-								<ul className='list-disc list-outside ml-4 text-sm mt-2 space-y-1'>
+								<ul className='list-disc list-outside ml-4 mt-2 space-y-1'>
 									<li>
-										Leading the design and development of frontend applications, creating responsive, user-friendly
-										interfaces for diverse clients.
+										Built <strong>Jurismemo</strong>, a digital resource platform aimed at simplifying legal concepts
+										for students — from design and frontend to backend APIs and content delivery.
 									</li>
+									<li>Designed searchable content, user authentication, and a responsive reading experience.</li>
 									<li>
-										Collaborating with cross-functional teams to deliver high-quality digital solutions, ensuring
-										compliance with accessibility standards and user experience best practices.
-									</li>
-									<li>
-										Revamped the{' '}
-										<a href='https://cematchmaker.com/' className='text-blue-600 link'>
-											CEMatchMaker
-										</a>{' '}
-										platform, improving site performance by 35% and user engagement by 40%.
-									</li>
-									<li>
-										Optimized the{' '}
-										<a href='https://worldkite.co.uk' className='text-blue-600 link'>
-											WorldKite
-										</a>{' '}
-										residency tracker, reducing page load times by 50% and enhancing functionality with advanced
-										tax-tracking algorithms.
-									</li>
-									<li>
-										Developed admin panels for NGOs (
-										<a href='https://ericchelpdesk.org' className='text-blue-600 link'>
-											Ericc Help Desk
-										</a>
-										) and advocacy platforms (
-										<a href='https://gender-lens-wp.s14staging.uk/' className='text-blue-600 link'>
-											Gender Lens
-										</a>
-										), simplifying backend operations and reducing administrative workload by 25%.
+										Ongoing work: integrating lightweight AI-assisted summaries and improving site discoverability.
 									</li>
 								</ul>
 							</div>
 
-							{/* Montech Studios Inc. */}
+							{/* LAWSAN South East Zone */}
 							<div>
 								<div className='flex justify-between items-baseline'>
 									<div>
-										<h3 className='font-bold text-[#800000]'>Backend Developer</h3>
-										<p className='italic'>Montech Studios Inc.</p>
+										<h3 className='font-bold text-[#800000]'>Web Developer — LAWSAN South East Zone</h3>
+										<p className='italic'>Client project</p>
 									</div>
 									<div className='text-right'>
-										<p className='italic'>Remote</p>
-										<p className='text-sm'>Feb 2022 – Jul 2022</p>
+										<p className='italic'>Owerri / Remote</p>
+										<p className='text-sm'>2024 – 2025</p>
 									</div>
 								</div>
-								<ul className='list-disc list-outside ml-4 text-sm mt-2 space-y-1'>
+
+								<ul className='list-disc list-outside ml-4 mt-2 space-y-1'>
 									<li>
-										Built backend infrastructures supporting over 10,000 concurrent users on blockchain applications.
+										Designed and developed the official LAWSAN South East Zone website and events portal, including
+										event registration and an awards voting system.
 									</li>
-									<li>Streamlined API integrations for Web3 applications, reducing data retrieval latency by 40%.</li>
+									<li>
+										Integrated secure payment flows and a voting mechanism to support large concurrent participation.
+									</li>
+									<li>Optimized UI/UX for mobile-first access and fast load times for campus networks.</li>
 								</ul>
 							</div>
 
-							{/* Scrapays Technologies */}
+							{/* Law Students Society — University of Ilorin */}
 							<div>
 								<div className='flex justify-between items-baseline'>
 									<div>
-										<h3 className='font-bold text-[#800000]'>Full Stack Developer</h3>
-										<p className='italic'>Scrapays Technologies</p>
+										<h3 className='font-bold text-[#800000]'>Web Developer — Law Students Society, Unilorin</h3>
+										<p className='italic'>Client project</p>
 									</div>
 									<div className='text-right'>
 										<p className='italic'>Remote</p>
-										<p className='text-sm'>Jan 2020 – Aug 2022</p>
+										<p className='text-sm'>2024</p>
 									</div>
 								</div>
-								<ul className='list-disc list-outside ml-4 text-sm mt-2 space-y-1'>
+
+								<ul className='list-disc list-outside ml-4 mt-2 space-y-1'>
 									<li>
-										Spearheaded the development of the first version of the Scrapays web and mobile platform, working
-										independently to create a robust infrastructure that met early-stage business needs.
+										Built the society’s website with a structured content system for news, events and announcements.
 									</li>
 									<li>
-										Deployed a fully functional mobile app on Google Play Store, increasing the app’s user base by 300%
-										in the first six months.
-									</li>
-									<li>
-										Developed a real-time IoT-enabled waste tracking system that improved operational efficiency by 50%
-									</li>
-									<li>
-										Played a pivotal role in securing partnerships by delivering demo-ready applications showcasing the
-										product&apos;s potential.
+										Implemented easy content editing workflows so society officers can update pages without developer
+										help.
 									</li>
 								</ul>
 							</div>
 
-							{/* The Binary Agency */}
+							{/* UNEC / LAWSA Voting Systems */}
 							<div>
 								<div className='flex justify-between items-baseline'>
 									<div>
-										<h3 className='font-bold text-[#800000]'>Software Engineer</h3>
-										<p className='italic'>The Binary Agency</p>
+										<h3 className='font-bold text-[#800000]'>Voting Systems — UNEC & LAWSA IMSU</h3>
+										<p className='italic'>Client projects</p>
 									</div>
 									<div className='text-right'>
-										<p className='italic'>Remote</p>
-										<p className='text-sm'>Jan 2019 – Jan 2020</p>
+										<p className='italic'>Remote / On-site</p>
+										<p className='text-sm'>2023 – 2025</p>
 									</div>
 								</div>
-								<ul className='list-disc list-outside ml-4 text-sm mt-2 space-y-1'>
+
+								<ul className='list-disc list-outside ml-4 mt-2 space-y-1'>
 									<li>
-										Built and maintained bespoke web applications for multiple clients, ensuring timely delivery and
-										adherence to project specifications.
+										Built secure and transparent voting portals for student elections and awards, including encrypted
+										authentication and live result tracking.
 									</li>
-									<li>Delivered five client projects on schedule, each with a 95% satisfaction rate.</li>
+									<li>
+										Added role-based access for admins and auditors, and dashboards for real-time analytics during
+										voting windows.
+									</li>
+									<li>Worked closely with clients to ensure trust, usability and verifiable result integrity.</li>
+								</ul>
+							</div>
+
+							{/* Other client & personal projects (summary) */}
+							<div>
+								<div className='flex justify-between items-baseline'>
+									<div>
+										<h3 className='font-bold text-[#800000]'>Other Projects & Freelance Work</h3>
+										<p className='italic'>Various clients</p>
+									</div>
+									<div className='text-right'>
+										<p className='italic'>2019 – Present</p>
+									</div>
+								</div>
+
+								<ul className='list-disc list-outside ml-4 mt-2 space-y-1'>
+									<li>
+										Multiple one-off websites, landing pages and admin dashboards delivered to small businesses and
+										student groups.
+									</li>
+									<li>Experience integrating payment gateways, building admin tools and improving site performance.</li>
 								</ul>
 							</div>
 						</div>
 					</section>
 
-					{/* Education */}
+					{/* Education (kept general — edit if you prefer exact entries) */}
 					<section>
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>EDUCATION</h2>
 						<div>
 							<div className='flex justify-between'>
-								<h3 className='font-bold text-[#800000]'>University of Ilorin</h3>
-								<span className='italic'>Kwara, NGA</span>
-							</div>
-							<div className='flex justify-between'>
-								<p className='text-sm italic'>B.Sc. Computer Science</p>
-								<span className='text-sm italic'>Sep. 2019 - Aug. 2024</span>
+								<h3 className='font-bold text-[#800000]'>LL.B (in view) / Legal Studies</h3>
+								<span className='italic'>In Progress</span>
 							</div>
 							<p className='text-sm italic'>
-								Relevant Coursework: Software Development, Web Programming, Algorithms, and Data Structures.
+								Currently completing law degree while operating as a freelance web developer. (Edit this section to add
+								your institution and dates if you want them visible on the printed resume.)
 							</p>
 						</div>
 					</section>
 
-					{/* Projects */}
+					{/* Projects summary */}
 					<section>
-						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>PROJECTS</h2>
+						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>PROJECT HIGHLIGHTS</h2>
 						<ul className='list-disc list-outside ml-4 text-sm space-y-2'>
 							<li>
-								<a href='https://scrapays.com/' className='text-blue-600 link font-bold'>
-									Scrapays Web and Mobile Platforms:
-								</a>{' '}
-								Developed a comprehensive platform for waste recycling management, integrating IoT features.
+								<strong>Jurismemo</strong> — ongoing personal platform for legal study aids and summaries; focus on
+								content UX and discoverability.
 							</li>
 							<li>
-								<span className='font-bold text-[#800000]'>Web3 Apps at Montech Studios:</span> Engineered secure
-								backend systems for crypto wallets and blockchain games.
-							</li>
-							<li>
-								<span className='font-bold text-[#800000]'>Studio 14 Government Projects:</span> Delivered digital
-								products for institutions and NGOs, including platforms for healthcare, tax tracking, and advocacy.
+								Voting & events platforms for student associations — emphasis on security, usability and fast
+								deployment.
 							</li>
 						</ul>
 					</section>
 
-					{/* Additional Skills */}
+					{/* Additions / Skills */}
 					<section>
-						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>ADDITIONALS</h2>
+						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>SKILLS & TOOLS</h2>
 						<div className='space-y-2 text-sm'>
 							<p>
-								<span className='font-bold'>Technical Skills:</span> Git, Typescript, React, Next.js, React Native,
-								TailwindCSS, GraphQL, Node.js, NestJS, Laravel, Go, Docker, Firebase, MongoDB, MySQL, PostgreSQL,
-								Firebase Firestore.
+								<strong>Tech:</strong> HTML, CSS, Tailwind, Typescript, Next.js, Node.js, PHP, Laravel, MySQL,
+								PostgreSQL, Git, Docker, Vercel/Netlify.
 							</p>
 							<p>
-								<span className='font-bold'>Soft Skills:</span> Communication, Team Leadership, Adaptability, Critical
-								Thinking, Attention to Detail, Time Management, Collaboration, Creative Problem-Solving
+								<strong>Soft Skills:</strong> Communication, client collaboration, project scoping, time management and
+								pragmatic problem-solving.
 							</p>
 						</div>
 					</section>
@@ -261,7 +266,7 @@ const Print: NextPage = () => {
 					{/* References */}
 					<section>
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>REFERENCES</h2>
-						<p className='text-sm'>Available on request</p>
+						<p className='text-sm'>Available on request.</p>
 					</section>
 				</div>
 			</Page>
