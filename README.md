@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+> ⚡ This portfolio was built upon an open-source template by [Mus'ab Olurode](https://github.com/musab-olurode), with custom improvements by Ugo.B.
+
 ## Getting Started
 
 First, run the development server:
