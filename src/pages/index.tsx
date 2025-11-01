@@ -82,7 +82,7 @@ const Home: NextPage = () => {
 				<meta name='robots' content='index, follow' />
 
 				<meta property='og:type' content='website' />
-				<meta property='og:title' content='Ugo.B — Web Developer & Web Designer in Owerri' />
+				<meta property='og:title' content='Ugo.B | FullStack developer in Owerri' />
 				<meta
 					property='og:description'
 					content='Looking for a professional web developer in Owerri or Imo State? Ugo.B builds clean, responsive, and SEO-driven websites that help brands stand out online.'
@@ -92,7 +92,7 @@ const Home: NextPage = () => {
 				<meta property='og:site_name' content='Ugo.B Portfolio' />
 
 				<meta name='twitter:card' content='summary_large_image' />
-				<meta name='twitter:title' content='Ugo.B — Web Developer in Owerri' />
+				<meta name='twitter:title' content='Ugo.B | Web Developer in Owerri' />
 				<meta
 					name='twitter:description'
 					content='Hire an experienced web developer and web designer in Owerri, Imo State. I create fast, modern, and responsive websites for businesses across Nigeria.'
