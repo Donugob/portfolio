@@ -167,7 +167,7 @@ const Home: NextPage = () => {
 					as='image'
 					href='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png'
 				/>
-				<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
 				<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet' />
 
 				{/* Favicon */}
