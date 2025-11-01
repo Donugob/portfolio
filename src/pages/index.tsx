@@ -87,7 +87,7 @@ const Home: NextPage = () => {
 					property='og:description'
 					content='Looking for a professional web developer in Owerri or Imo State? Ugo.B builds clean, responsive, and SEO-driven websites that help brands stand out online.'
 				/>
-				<meta property='og:image' content='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png' />
+				<meta property='og:image' content='https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg' />
 				<meta property='og:url' content='https://build-with-ugob.com.ng' />
 				<meta property='og:site_name' content='Ugo.B Portfolio' />
 
@@ -97,10 +97,7 @@ const Home: NextPage = () => {
 					name='twitter:description'
 					content='Hire an experienced web developer and web designer in Owerri, Imo State. I create fast, modern, and responsive websites for businesses across Nigeria.'
 				/>
-				<meta
-					name='twitter:image'
-					content='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png'
-				/>
+				<meta name='twitter:image' content='https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg' />
 
 				<meta name='geo.region' content='NG-IM' />
 				<meta name='geo.placename' content='Owerri' />
@@ -122,7 +119,7 @@ const Home: NextPage = () => {
 							description:
 								'Full-stack web developer based in Owerri, Imo State, Nigeria. I specialize in building responsive, SEO-optimized websites for brands and individuals.',
 							url: 'https://build-with-ugob.com.ng',
-							image: 'https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png',
+							image: 'https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg',
 							address: {
 								'@type': 'PostalAddress',
 								addressLocality: 'Owerri',
@@ -145,7 +142,7 @@ const Home: NextPage = () => {
 							'@context': 'https://schema.org',
 							'@type': 'LocalBusiness',
 							name: 'Ugo.B (Emeka Emmanuel Ugonna)',
-							image: 'https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png',
+							image: 'https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg',
 							telephone: '+2348103579586',
 							address: {
 								'@type': 'PostalAddress',
@@ -162,11 +159,7 @@ const Home: NextPage = () => {
 						}),
 					}}
 				/>
-				<link
-					rel='preload'
-					as='image'
-					href='https://i.postimg.cc/TY6tR7k1/Generated-Image-November-01-2025-1-42PM.png'
-				/>
+				<link rel='preload' as='image' href='https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg' />
 				<link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />
 				<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet' />
 
