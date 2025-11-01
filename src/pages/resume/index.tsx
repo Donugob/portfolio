@@ -67,8 +67,8 @@ const Print: NextPage = () => {
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>PROFESSIONAL SUMMARY</h2>
 						<p className='text-sm'>
 							Freelance full-stack web developer (Ugo.B) based in Owerri, Imo State. I design and build fast,
-							accessible, and SEO-optimised websites and web applications for student associations, small businesses and
-							organizations across Nigeria. I focus on pragmatic solutions — clean frontends, reliable backends, and
+							accessible, and SEO-optimised websites and web applications for associations, small businesses and
+							organizations across Nigeria. I focus on pragmatic solutions, clean frontends, reliable backends, and
 							deployable systems that make an immediate difference to clients.
 						</p>
 					</section>
@@ -78,8 +78,7 @@ const Print: NextPage = () => {
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>CORE COMPETENCIES</h2>
 						<div className='grid grid-cols-2 gap-4'>
 							<ul className='list-disc list-outside ml-4 text-sm'>
-								<li>Responsive Frontend (HTML, CSS, Tailwind)</li>
-								<li>Backend & API design (Node, PHP, simple REST)</li>
+								<li>Responsive Frontend (HTML, CSS, Tailwind, Javascript, React)</li>
 								<li>Static site & SEO optimisation</li>
 								<li>Authentication & role-based systems</li>
 							</ul>
@@ -105,7 +104,7 @@ const Print: NextPage = () => {
 									</div>
 									<div className='text-right'>
 										<p className='italic'>Owerri / Remote</p>
-										<p className='text-sm'>2024 – Present</p>
+										<p className='text-sm'>2022 – Present</p>
 									</div>
 								</div>
 								<ul className='list-disc list-outside ml-4 mt-2 space-y-1'>
@@ -129,7 +128,7 @@ const Print: NextPage = () => {
 									</div>
 									<div className='text-right'>
 										<p className='italic'>Owerri / Remote</p>
-										<p className='text-sm'>2024 – 2025</p>
+										<p className='text-sm'>2025</p>
 									</div>
 								</div>
 
@@ -154,7 +153,7 @@ const Print: NextPage = () => {
 									</div>
 									<div className='text-right'>
 										<p className='italic'>Remote</p>
-										<p className='text-sm'>2024</p>
+										<p className='text-sm'>2025</p>
 									</div>
 								</div>
 
@@ -177,8 +176,8 @@ const Print: NextPage = () => {
 										<p className='italic'>Client projects</p>
 									</div>
 									<div className='text-right'>
-										<p className='italic'>Remote / On-site</p>
-										<p className='text-sm'>2023 – 2025</p>
+										<p className='italic'>Remote</p>
+										<p className='text-sm'>2025</p>
 									</div>
 								</div>
 
@@ -223,12 +222,11 @@ const Print: NextPage = () => {
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>EDUCATION</h2>
 						<div>
 							<div className='flex justify-between'>
-								<h3 className='font-bold text-[#800000]'>LL.B (in view) / Legal Studies</h3>
+								<h3 className='font-bold text-[#800000]'>LL.B (in view) / Law Degree</h3>
 								<span className='italic'>In Progress</span>
 							</div>
 							<p className='text-sm italic'>
-								Currently completing law degree while operating as a freelance web developer. (Edit this section to add
-								your institution and dates if you want them visible on the printed resume.)
+								Currently completing law degree at Imo State University while operating as a freelance web developer.
 							</p>
 						</div>
 					</section>
@@ -253,8 +251,8 @@ const Print: NextPage = () => {
 						<h2 className='text-lg font-bold text-[#003366] border-b border-gray-300 mb-3'>SKILLS & TOOLS</h2>
 						<div className='space-y-2 text-sm'>
 							<p>
-								<strong>Tech:</strong> HTML, CSS, Tailwind, Typescript, Next.js, Node.js, PHP, Laravel, MySQL,
-								PostgreSQL, Git, Docker, Vercel/Netlify.
+								<strong>Tech:</strong> HTML, CSS, Tailwind, Javascript, React, Typescript, Next.js, Node.js, PHP,
+								Laravel, MySQL, PostgreSQL, Git, Docker, Vercel/Netlify.
 							</p>
 							<p>
 								<strong>Soft Skills:</strong> Communication, client collaboration, project scoping, time management and
