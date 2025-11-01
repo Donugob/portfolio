@@ -3,7 +3,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 class MyDocument extends Document {
 	render() {
 		return (
-			<Html data-theme='dark'>
+			<Html data-theme='dark' lang='en'>
 				<Head>
 					<link
 						rel='preload'

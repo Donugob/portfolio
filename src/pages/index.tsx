@@ -5,6 +5,7 @@ import Nav from '../components/Nav';
 import { UnderlineLargeIcon } from '../components/icons/underline-large';
 import ArrowDown from '../components/icons/arrow-down';
 import SunIcon from '../components/icons/sun';
+import WhatsappIcon from '../components/icons/WhatsappIcon';
 import MailIcon from '../components/icons/mail';
 import TwitterIcon from '../components/icons/twitter';
 import LinkedInIcon from '../components/icons/linked-in';
@@ -72,8 +73,9 @@ const Home: NextPage = () => {
 				<title>Ugo.B | Full Stack Developer in Imo State</title>
 				<meta
 					name='description'
-					content='Ugo.B is a professional full-stack web developer and web designer based in Owerri, Imo State, Nigeria. I build fast, modern, SEO-optimized websites for businesses and individuals across Nigeria.'
+					content='Ugo.B is a full-stack web developer and designer in Owerri, Imo State, Nigeria. I build fast, modern, and SEO-optimized websites for Nigerian businesses.'
 				/>
+
 				<meta
 					name='keywords'
 					content='web developer, website developer, web developer Owerri, web designer Owerri, web developer Imo State, website developer Owerri, web design Imo, Owerri web developer, freelance web developer Nigeria, full stack developer Owerri, best web designer Owerri, website development in Owerri'
@@ -88,7 +90,7 @@ const Home: NextPage = () => {
 					content='Looking for a professional web developer in Owerri or Imo State? Ugo.B builds clean, responsive, and SEO-driven websites that help brands stand out online.'
 				/>
 				<meta property='og:image' content='https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg' />
-				<meta property='og:url' content='https://build-with-ugob.com.ng' />
+				<meta property='og:url' content='https://www.build-with-ugob.com.ng' />
 				<meta property='og:site_name' content='Ugo.B Portfolio' />
 
 				<meta name='twitter:card' content='summary_large_image' />
@@ -104,7 +106,7 @@ const Home: NextPage = () => {
 				<meta name='geo.position' content='5.4853;7.0350' />
 				<meta name='ICBM' content='5.4853, 7.0350' />
 
-				<link rel='canonical' href='https://build-with-ugob.com.ng' />
+				<link rel='canonical' href='https://www.build-with-ugob.com.ng' />
 
 				<script
 					type='application/ld+json'
@@ -118,7 +120,7 @@ const Home: NextPage = () => {
 							telephone: '+2348103579586',
 							description:
 								'Full-stack web developer based in Owerri, Imo State, Nigeria. I specialize in building responsive, SEO-optimized websites for brands and individuals.',
-							url: 'https://build-with-ugob.com.ng',
+							url: 'https://www.build-with-ugob.com.ng',
 							image: 'https://i.postimg.cc/5NmhGxDV/IMG-20240119-WA0092-min.jpg',
 							address: {
 								'@type': 'PostalAddress',
@@ -150,7 +152,7 @@ const Home: NextPage = () => {
 								addressRegion: 'Imo State',
 								addressCountry: 'NG',
 							},
-							url: 'https://build-with-ugob.com.ng',
+							url: 'https://www.build-with-ugob.com.ng',
 							sameAs: [
 								'https://github.com/donugob',
 								'https://x.com/Don_ugob',
@@ -167,6 +169,19 @@ const Home: NextPage = () => {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<Nav currentSection={currentSection} currentTheme={currentTheme} onPressNav={handlePressNav} />
+			{/* Internal anchor links for SEO / crawlability */}
+			<nav aria-label='Page sections' className='sr-only sm:not-sr-only sm:flex sm:justify-center sm:gap-6 mt-4'>
+				<a href='#about' className='link'>
+					About
+				</a>
+				<a href='#experience' className='link'>
+					Projects
+				</a>
+				<a href='#contact' className='link'>
+					Contact
+				</a>
+			</nav>
+
 			<div
 				className={clsx(
 					'relative snap-y snap-mandatory min-h-screen overflow-y-scroll',
@@ -182,7 +197,7 @@ const Home: NextPage = () => {
 							</p>
 						</div>
 						<InView className='overflow-hidden' onChange={(inView) => handleOnVisibilityChanged(inView, 'main')}>
-							<p className='font-bold mb-8 animate-slide-in'>Full Stack Developer</p>
+							<h1 className='font-bold mb-8 animate-slide-in'>Full Stack Developer</h1>
 						</InView>
 						<div className='flex flex-col justify-center items-center'>
 							<UnderlineLargeIcon
@@ -212,7 +227,7 @@ const Home: NextPage = () => {
 					className='h-screen container mx-auto flex flex-col justify-center snap-center px-2 md:px-0'
 					ref={aboutRef}>
 					<InView onChange={(inView) => handleOnVisibilityChanged(inView, 'about')}>
-						<p className='text-2xl lg:text-6xl font-bold text-center'>About Me</p>
+						<h2 className='text-2xl lg:text-6xl font-bold text-center'>About Me</h2>
 					</InView>
 					<div
 						className={clsx(
@@ -227,9 +242,9 @@ const Home: NextPage = () => {
 					<p className='text-md md:text-2xl mt-12 lg:text-left'>
 						I’m <strong>Emeka Emmanuel Ugonna</strong> (popularly known as <strong>Ugo.B</strong>), a passionate
 						full-stack web developer based in <strong>Owerri, Imo State</strong>. I specialize in building fast, clean,
-						and responsive websites that don’t just look great but also perform exceptionally well on search engines.
-						Over the years, I’ve worked on diverse projects — from personal portfolios to business websites and tech
-						platforms — helping brands bring their ideas to life through functional and visually appealing design.
+						and responsive websites that not only look great but also perform exceptionally well on search engines. Over
+						the years, I’ve worked on diverse projects, from personal portfolios to business websites and tech
+						platforms, helping brands bring their ideas to life through functional and visually appealing design.
 						<br />
 						<br />
 						What drives me is simple: turning creative concepts into scalable digital experiences that make an impact.
@@ -243,7 +258,7 @@ const Home: NextPage = () => {
 					ref={experienceRef}
 					className='h-screen container mx-auto flex flex-col justify-center snap-center px-2 md:px-0'>
 					<InView onChange={(inView) => handleOnVisibilityChanged(inView, 'experience')}>
-						<p className='text-md md:text-2xl font-bold mb-4 md:mb-14'>Projects & Experience</p>
+						<h2 className='text-md md:text-2xl font-bold mb-4 md:mb-14'>Projects & Experience</h2>
 					</InView>
 
 					<div className='flex flex-col lg:flex-row min-h-[428px] lg:min-h-[504px]'>
@@ -304,12 +319,12 @@ const Home: NextPage = () => {
 									'duration-300 lg:translate-x-40',
 									currentTab === 'jurismemo' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Founder & Developer @ Jurismemo</p>
-								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025 – Present</p>
+								<h3 className='text-lg lg:text-4xl font-bold'>Founder & Developer @ Jurismemo</h3>
+								<p className='text-md md:text-2xl md:mt-5 mb-7'>2022 – Present</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
 									<li>
-										Created <strong>Jurismemo</strong>, a digital legal resource platform simplifying complex legal
-										materials for Nigerian students.
+										Created Jurismemo, a digital legal resource platform simplifying complex legal materials for
+										Nigerian students.
 									</li>
 									<li>
 										Handled everything from UI/UX design and frontend architecture to backend APIs and data models.
@@ -327,7 +342,7 @@ const Home: NextPage = () => {
 									'duration-300 lg:translate-x-40',
 									currentTab === 'lawsanse' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Web Developer @ LAWSAN South East Zone</p>
+								<h3 className='text-lg lg:text-4xl font-bold'>Web Developer @ LAWSAN South East Zone</h3>
 								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
 									<li>
@@ -346,9 +361,9 @@ const Home: NextPage = () => {
 									'duration-300 lg:translate-x-40',
 									currentTab === 'ulorin' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>
+								<h3 className='text-lg lg:text-4xl font-bold'>
 									Web Developer @ Law Students Society, University of Ilorin
-								</p>
+								</h3>
 								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
 									<li>
@@ -366,7 +381,7 @@ const Home: NextPage = () => {
 									'duration-300 lg:translate-x-40',
 									currentTab === 'unec' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Voting System Developer @ UNEC LAWSA</p>
+								<h3 className='text-lg lg:text-4xl font-bold'>Voting System Developer @ UNEC LAWSA</h3>
 								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
 									<li>
@@ -384,7 +399,7 @@ const Home: NextPage = () => {
 									'duration-300 lg:translate-x-40',
 									currentTab === 'lawsaimsu' && 'opacity-100 translate-x-0 lg:translate-x-0'
 								)}>
-								<p className='text-lg lg:text-4xl font-bold'>Developer @ LAWSA IMSU</p>
+								<h3 className='text-lg lg:text-4xl font-bold'>Developer @ LAWSA IMSU</h3>
 								<p className='text-md md:text-2xl md:mt-5 mb-7'>2025</p>
 								<ul className='text-md md:text-2xl list-disc list-outside pl-4 flex flex-col md:gap-y-10'>
 									<li>
@@ -402,9 +417,25 @@ const Home: NextPage = () => {
 					ref={contactRef}
 					className='h-screen container mx-auto flex flex-col justify-center items-center snap-center px-2 md:px-0'>
 					<InView onChange={(inView) => handleOnVisibilityChanged(inView, 'contact')}>
-						<p className='text-3xl lg:text-7xl'>Contact Me</p>
+						<h2 className='text-3xl lg:text-7xl'>Contact Me</h2>
 					</InView>
 					<div className='flex justify-between mt-16 gap-x-5 lg:gap-x-16'>
+						<a
+							href='https://wa.me/2348103579586'
+							target='_blank'
+							rel='noreferrer'
+							title='WhatsApp'
+							className={clsx(
+								'btn btn-circle bg-transparent border-2 w-[50px] h-[50px] lg:w-[82px] lg:h-[82px] p-2 group',
+								currentTheme === 'dark' ? 'border-white' : 'border-main'
+							)}>
+							<WhatsappIcon
+								className={clsx(
+									'w-5 h-5 lg:w-auto lg:h-auto transition-colors group-hover:text-white',
+									currentTheme === 'dark' ? 'text-white' : 'text-main'
+								)}
+							/>
+						</a>
 						<a
 							href='mailto:contactugob@gmail.com'
 							title='Email'
